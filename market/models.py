@@ -19,7 +19,7 @@ class Lesson(models.Model):
         (3,'３ターム'),
         (4,'４ターム'),
         )
-    WEEK_CHOICE = (
+    WEEK_CHOICES = (
         (1,'月曜'),
         (2,'火曜'),
         (3,'水曜'),
@@ -67,25 +67,25 @@ class Lesson(models.Model):
 
     term = models.IntegerField(
                                 verbose_name = 'ターム',
-                                choices =　TERM_CHOICES,
+                                choices = TERM_CHOICES,
                                 default = 1,
                                 )
     
     dayOfTheWeek = models.IntegerField(
                                 verbose_name = '曜日',
-                                choices =　WEEK_CHOICES,
+                                choices = WEEK_CHOICES,
                                 default = 1,
                                 )
 
     period = models.IntegerField(
                                 verbose_name = '時限',
-                                choices =PERIOD_CHOICES,
+                                choices = PERIOD_CHOICES,
                                 default = 1,
                                 )
 
     yearOfStudy = models.IntegerField(
                                 verbose_name = '推奨レベル',
-                                choices =LEVEL_CHOICES,
+                                choices = LEVEL_CHOICES,
                                 default = 1,
                                 )
     
@@ -153,6 +153,7 @@ class Book(models.Model):
                                 verbose_name = '価格',
                                 default = 300,
                                 )
+    
     
     def __str__(self):
         return self.title
