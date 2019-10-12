@@ -1,0 +1,90 @@
+body {
+    position: relative;
+    text-align: center;
+    background: #eee2e9;
+}
+p {
+  color: #383838;
+}
+.header {
+  width: 100%;
+  height: 40px;
+  background: #8B8888;
+}
+.main_img {
+  position: relative;
+  top: 10px;
+  width: 170px;
+  height: 75px;
+  background: url('../img/logo.png');
+  background-size: 100%;
+}
+.flame {
+  position: relative;
+  margin: auto;
+  top: 20px;
+  width: 700px;
+  height: 300px;
+  background: #fff;
+}
+h2 {
+  position: relative;
+  top: -10px;
+  color: #404040;
+}
+#good {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #F8BCE0;
+  position: relative;
+  margin-left: 580px;
+  top: -60px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 0px;
+  text-align: center;
+  color: #8b8888;
+  text-shadow: -1px -1px rgba(255, 255, 255, 0.44), 1px 1px rgba(0, 0, 0, 0.38);
+  font-size: 25px;
+  overflow: hidden;
+  transition: .4s;
+}
+#good: hover {
+  background: #F96491;
+}
+#goodmoji {
+  position: relative;
+  margin-left: 585px;
+  top: -60px;
+  font-size: 3px;
+  color: #F443AD;
+}
+#exhibitor {
+  position: relative;
+  margin-right: 600px;
+  top: 20px;
+  font-size: 18px;
+  color: #6f6f6f;
+}
+.flame2 {
+  position: relative;
+  margin: auto;
+  top: 10px;
+  width: 700px;
+  height: 100px;
+  background: #fff;
+}
+#talk {
+  position: relative;
+  top: 100px;
+  width: 300px;
+  height: 40px;
+  border: 0px;
+  border-radius: 10px;
+  background: #ffaf9d;
+  color: #fff;
+}
+#exhibitor-infomation {
+  color: #989898;
+}
