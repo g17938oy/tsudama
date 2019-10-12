@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <title>home</title> <!--サイトの名前-->
+  </head>
+  <body>
+    <div class="header"></div>
+    <center>
+      <!--<img src="img/logo.png" alt="ロゴ" width="150" height="100">-->
+      <div class="main_img"></div><!--画像（ロゴ）表示-->
+    </center>
+    <div class="flame">
+      <p id="noacount">アカウントを持っていないなら・・・</p>
+      <p><input type="submit" id="new" value="新規登録"></p>
+      <hr>
+      <form method="post" action="example.cgi">
+	       <input type="search" name="address" id="search" placeholder="津田メールアドレス"><br>
+         <input type="password" name="password" id="search" placeholder="パスワード"><br>
+	        <a href="{% url 'home' %}"><button id="login" type="button">ログイン</button></a>
+          <!--<input type="submit" name="submit" id="search-button" value="ログイン">-->
+	    </form>
+      <u id="forget">パスワードを忘れた？</u>
+    </div>
+  </body>
+</html>

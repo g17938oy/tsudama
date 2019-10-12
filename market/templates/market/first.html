@@ -1,24 +1,28 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/first.css' %}">
     <title>first</title> <!--サイトの名前-->
-    
+
   </head>
   <body>
+    <div class="header"></div>
     <center>
-      <img src="logo.png" alt="ロゴ" width="300" height="200">
-      
-      
+      <!--<img src="logo.png" alt="ロゴ" width="300" height="200">-->
+      <div class="main_img"></div><!--画像（ロゴ）表示-->
+
       <p>~津田塾大学生のためのフリーマーケット~</p>
-   
+
     <!--<button type=“button” onclick="location.href='https://www.sejuku.net'">遷移！</button>
 	URLで飛ばすやり方
       -->
 
-  
-    <button type="button" style="width:100px;height:50px">新規登録</button>
-    <button type="button" style="width:100px;height:50px">ログイン</button>
+    <button id="new" type="button">　　新規登録　　</button>
+    <a href="{% url 'login' %}"><button id="login" type="button">　　ログイン　　</button></a>
 </center>
 </body>
 </html>
