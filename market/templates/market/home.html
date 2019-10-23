@@ -1,25 +1,31 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
     <title>home</title> <!--サイトの名前-->
-    
   </head>
   <body>
+    <div class="header"></div>
     <center>
-      <img src="logo.png" alt="ロゴ" width="150" height="100">
+      <!--<img src="img/logo.png" alt="ロゴ" width="150" height="100">-->
+      <div class="main_img"></div><!--画像（ロゴ）表示-->
       </center>
-    
+
     <form method="post" action="example.cgi">
       <form action="cgi-bin/abc.cgi" method="post">
-	<form action="cgi-bin/example.cgi" method="post">
-	  
-	  <p>検索したいキーワードを入力してください。</p>
-	  <input type="search" name="search" placeholder="キーワードを入力">
-	  <input type="submit" name="submit" value="検索">
+	<form action="cgi-bin/example.cgi" class="word-search" method="get">
+
+	  <p class="words">検索したいキーワードを入力してください。</p>
+	  <input type="search" name="search" id="search" placeholder="キーワードを入力">
+	  <input type="submit" name="submit" id="search-button" value="検索">
 	</form>
+
 	<p>
-	  
+
 	  <input type="checkbox" name="undergraduate" value="学科" checked="checked">学科
 	  <select name="undergraduate">
 	    <!--value=送信される文字列-->
@@ -30,10 +36,8 @@
 	    <option value="国際関係学科">国際関係学科</option>
 	    <option value="数学科">数学科</option>
 	    <option value="情報科学科">情報科学科</option>
-	    
+
 	  </select>
-	</p>
-	<p>
 	  <input type="checkbox" name="term" value="ターム" checked="checked">ターム
 	  <select name="undergraduate">
 	    <!--value=送信される文字列-->
@@ -41,11 +45,9 @@
 	    <option value="2ターム">２ターム</option>
 	    <option value="3ターム">３ターム</option>
 	    <option value="4ターム">４ターム</option>
-	    
-	    
+
+
 	  </select>
-	</p>
-	<p>
 	  <input type="checkbox" name="week" value="曜日" checked="checked">曜日
 	  <select name="undergraduate">
 	    <!--value=送信される文字列-->
@@ -53,11 +55,9 @@
 	    <option value="火曜">火曜</option>
 	    <option value="水曜">水曜</option>
 	    <option value="木曜">木曜</option>
-	    <option value="金曜">金曜</option>	    
-	    
+	    <option value="金曜">金曜</option>
+
 	  </select>
-	</p>
-	<p>
 	  <input type="checkbox" name="period" value="時限" checked="checked">時限
 	  <select name="period">
 	    <!--value=送信される文字列-->
@@ -67,10 +67,8 @@
 	    <option value="4限">４限</option>
 	    <option value="5限">５限</option>
 	    <option value="6限">６限</option>
-	    
+
 	  </select>
-	</p>
-	<p>
 	  <input type="checkbox" name="level" value="学年" checked="checked">学年
 	  <select name="level">
 	    <!--value=送信される文字列-->
@@ -78,18 +76,19 @@
 	    <option value="2年">２年</option>
 	    <option value="3年">３年</option>
 	    <option value="4年">４年</option>
-	    
-	    
+
+
 	  </select>
 	</p>
 
-	<p><input type="submit" value="検索する"></p>
+	<p><input type="submit" id="search-button2" value="検索する"></p>
 
       </form>
-      
+
       <!--<button type=“button” onclick="location.href='https://www.sejuku.net'">遷移！</button>
 	  URLで飛ばすやり方
 	-->
+<a href="{% url 'product' %}"><div class="onebook"></div></a>
 
       {% for book in books %}
             <h2>書籍名:{{ book.title }}</h2>
@@ -102,6 +101,6 @@
             <p>状態:{{ book.state }}</p>
             <p>価格:{{ book.price }}</p>
         {% endfor %}
-      
+
   </body>
 </html>

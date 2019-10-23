@@ -1,29 +1,38 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/talk.css' %}">
+
     <title>talk</title> <!--サイトの名前-->
-    
+
   </head>
   <body>
+    <div class="header"></div>
     <center>
-    <img src="logo.png" alt="ロゴ" width="150" height="100">
+    <!--<img src="logo.png" alt="ロゴ" width="150" height="100">-->
+    <div class="main_img"></div><!--画像（ロゴ）表示-->
       </center>
-    <div style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333; border-radius: 10px;">
+    <div class="flame" style="padding: 10px; margin-bottom: 10px; border: 1px solid #8b8888; border-radius: 10px;">
+      <h2>〜教科書名〜</h2>
       <p>教科書情報</p>
-      <button type="button">いいね</button>
-    </div>
-    
-    <div style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333; border-radius: 10px;">
-      <p>トーク画面</p>
-      
+      <button id="good" type="button">♡</button>
+      <p id="goodmoji">いいね！</p>
     </div>
 
-    
+    <div class="flame2" style="padding: 10px; margin-bottom: 10px; border: 1px solid #8b8888; border-radius: 10px;">
+      <p id="talk">トーク画面</p>
+
+    </div>
+
+
     <!--<button type=“button” onclick="location.href='https://www.sejuku.net'">遷移！</button>
 	URLで飛ばすやり方
       -->
-    
-    
+
+
   </body>
 </html>
